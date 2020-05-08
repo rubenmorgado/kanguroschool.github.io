@@ -845,7 +845,7 @@ body {
   background-position: center; }
   @media (min-width: 0) and (max-width: 600px) {
     .banner-formacion {
-      height: 50%; } }
+      height: 70%; } }
   .banner-formacion .banner-tittle {
     position: absolute;
     top: 40%;
@@ -863,7 +863,7 @@ body {
       margin-bottom: 30px; }
       @media (min-width: 0) and (max-width: 600px) {
         .banner-formacion .banner-tittle h1 {
-          font-size: 40px; } }
+          font-size: 31px; } }
     .banner-formacion .banner-tittle p {
       font-size: 24px;
       color: #303030;
@@ -1235,7 +1235,7 @@ body {
   background-position: center; }
   @media (min-width: 0) and (max-width: 600px) {
     .banner-ne {
-      height: 50%; } }
+      height: 70%; } }
   .banner-ne .banner-tittle {
     position: absolute;
     top: 40%;
@@ -1253,7 +1253,7 @@ body {
       margin-bottom: 30px; }
       @media (min-width: 0) and (max-width: 600px) {
         .banner-ne .banner-tittle h1 {
-          font-size: 40px; } }
+          font-size: 31px; } }
     .banner-ne .banner-tittle p {
       font-size: 24px;
       color: #fff;
@@ -1330,7 +1330,7 @@ body {
   background-position: center; }
   @media (min-width: 0) and (max-width: 600px) {
     .banner-va {
-      height: 50%; } }
+      height: 70%; } }
   .banner-va .banner-tittle {
     position: absolute;
     top: 40%;
@@ -1348,7 +1348,7 @@ body {
       margin-bottom: 30px; }
       @media (min-width: 0) and (max-width: 600px) {
         .banner-va .banner-tittle h1 {
-          font-size: 40px; } }
+          font-size: 31px; } }
     .banner-va .banner-tittle p {
       font-size: 24px;
       color: #fff;
