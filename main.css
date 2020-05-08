@@ -777,7 +777,7 @@ body {
       color: #303030; }
       @media (min-width: 0) and (max-width: 600px) {
         .banner-contact .slogan h1 {
-          font-size: 45px; } }
+          font-size: 40px; } }
     .banner-contact .slogan .txt-o {
       color: #CC6601; }
 
@@ -863,7 +863,7 @@ body {
       margin-bottom: 30px; }
       @media (min-width: 0) and (max-width: 600px) {
         .banner-formacion .banner-tittle h1 {
-          font-size: 45px; } }
+          font-size: 40px; } }
     .banner-formacion .banner-tittle p {
       font-size: 24px;
       color: #303030;
@@ -1253,7 +1253,7 @@ body {
       margin-bottom: 30px; }
       @media (min-width: 0) and (max-width: 600px) {
         .banner-ne .banner-tittle h1 {
-          font-size: 45px; } }
+          font-size: 40px; } }
     .banner-ne .banner-tittle p {
       font-size: 24px;
       color: #fff;
@@ -1348,7 +1348,7 @@ body {
       margin-bottom: 30px; }
       @media (min-width: 0) and (max-width: 600px) {
         .banner-va .banner-tittle h1 {
-          font-size: 45px; } }
+          font-size: 40px; } }
     .banner-va .banner-tittle p {
       font-size: 24px;
       color: #fff;
