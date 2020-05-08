@@ -1,0 +1,27 @@
+//fonts
+$font-txt:'Inter', sans-serif;
+$font-btn:'Inter', sans-serif;
+//styles
+
+
+*:focus {
+  outline: 0;
+}
+
+@import "mixin";
+@import "reset";
+@import "nav";
+@import "hero";
+@import "footer";
+@import "aside";
+@import "about";
+@import "main-L-R";
+@import "contacto";
+@import "main-contact";
+@import "formacion";
+@import "temas";
+@import "modulo-0";
+@import "aside-txt";
+@import "cards";
+@import "modulo1";
+@import "modulo2";

@@ -1,0 +1,61 @@
+$primary-font:'Inter', sans-serif;
+$copy-font:'Inter', sans-serif;
+$primary-color:#303030; /* cinza escuro */ 
+$text-color:gray; 
+$orange-color:#CC6601;
+$green-color:#2D903D;     /*#2D903D - verde */   /*#303030 - cinza escuro */
+
+@mixin mq($smallerValue,$biggerValue) {
+  @media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+    @content;
+  }
+}
+
+.temas{
+	max-width: 100%;
+	width: 100%;
+	position: relative;
+	@include mq(0,600px){
+			padding: 4%;
+		}
+	.titulo-temas{
+		display:block;
+		padding-left: 10%;
+		@include mq(0,600px){
+			padding: 0px;
+			margin-bottom: 30px;
+		}
+		p{
+			font-family:$primary-font;
+			font-size: 32px;
+			font-weight: 400;
+			color:$orange-color;
+			&.sub-title{
+				margin:20px 0 50px 0;
+			}
+		}
+	}
+	.list-topics{
+		width: 680px;
+		margin: 0 auto;
+		border-left: $orange-color 1px solid;
+		padding-left: 4%;
+		@include mq(0,600px){
+			width: 100%;
+			border:none;
+		}
+		.topic-name{
+			text-align: left;
+			p{
+				font-family:$primary-font;
+				font-size: 1.6em;
+				font-weight: 300;
+				color:$primary-color;
+				margin-bottom: 50px;
+				@include mq(0,600px){
+					font-size: 1.2em;
+				}
+			}
+		}
+	}
+}

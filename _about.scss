@@ -1,0 +1,96 @@
+$primary-font:'Inter', sans-serif;
+$copy-font:'Inter', sans-serif;
+$primary-color:#303030; /* cinza escuro */ 
+$text-color:gray; 
+$orange-color:#CC6601;
+$green-color:#2D903D;     /*#2D903D - verde */   /*#303030 - cinza escuro */
+
+@mixin mq($smallerValue,$biggerValue) {
+  @media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+    @content;
+  }
+}
+
+html{
+	height: 100%;
+}
+body {
+  font-family: $primary-font;
+  height:100%;
+}
+
+.banner{
+    	width:100%;
+      height: 100vh;
+    	position: relative;
+    	background-image: url("../img/undraw_super_thank_you_obwk.png");
+    	background-repeat: no-repeat;
+    	background-size: 50% ;
+    	background-position: right;
+    	@include mq(0,600px){
+            height: 50%;
+            background-position: bottom;
+     }
+	.intro{
+	    position:absolute;
+      top:30%;
+      left:7%;
+	    max-width:60%;
+	    width:100%;
+      padding: 3%;
+      @include mq(0,600px){
+        top:10%;
+        max-width:80%;
+     }
+	  p{
+      font-size:40px;   
+      color:$primary-color;
+      font-family:$primary-font;
+      font-weight: 300;
+      margin-bottom:60px;
+      padding-right: 156px;
+      line-height: 1.1;
+      @include mq(0,600px){
+        font-size: 19px;
+        padding: 0px;
+        line-height: 1.3;
+        letter-spacing: 0.4px;
+     }
+    }
+    .txt-g{
+      color:$green-color;
+    }
+    .txt-o{
+      color:$orange-color; 
+    }
+  }
+}
+
+.txt-center{
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  padding: 5%;
+    .txt-c{
+      width:60%;
+      margin:0 auto;
+      padding:2%;
+      line-height: 1.1;
+      @include mq(0,600px){
+         width:100%;
+         line-height: 1.3;
+         padding: 3%;
+         margin-top: 15px;
+     }
+      h1{
+        text-align:center;
+        font-size: 25px;
+        font-weight: 400;
+        font-family: $primary-font;
+        color:$green-color; 
+        @include mq(0,600px){
+         font-size: 17px;
+     }
+      }
+   }
+}

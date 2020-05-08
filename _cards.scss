@@ -1,0 +1,123 @@
+$primary-font:'Inter', sans-serif;
+$copy-font:'Inter', sans-serif;
+$primary-color:#303030; /* cinza escuro */ 
+$text-color:gray; 
+$orange-color:#CC6601;
+$green-color:#2D903D;   
+
+$anim-speed: 0.3s;
+
+@mixin mq($smallerValue,$biggerValue) {
+  @media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+    @content;
+  }
+}
+
+.tutores-content{
+	max-width: 100%;
+	width: 100%;
+	position: relative;
+	padding-top: 5%;
+	h1{
+		font-size: 32px;
+		font-family:$primary-font;
+		color:$orange-color; 
+		text-align: left;
+		padding-left: 10%;
+	}
+	.card-container {
+		width: 1040px;
+		font-size: 0;
+		text-align: center;
+		margin:100px auto 0 auto;
+		@include mq(0,600px){
+				display: block;
+				width:100%;
+				text-align: center;
+				margin-top: 30px;
+			}
+
+		.card {
+			max-width: 170px;
+			height: 215px;
+			display: inline-block;
+			margin: 20px;
+			text-align: left;
+			opacity: .99;
+			overflow: hidden;
+			position: relative;
+			box-shadow:-1px 0 2px 0 rgba(0,0,0,0.12) , 1px 0 2px 0 rgba(0,0,0,0.12) , 0 1px 1px 0 rgba(0,0,0,0.24);
+			@include mq(0,600px){
+				width:85%;
+				text-align: center;
+			}
+			&:before {
+				content: '';
+				background:rgba(45, 144, 61,0.7);
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				z-index: 2;
+				transition-property: top, opacity;
+				transition-duration: $anim-speed;
+			}
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+			}
+			.details {
+				font-size: 16px;
+				padding: 10px;
+				color: #fff;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 3;
+				span {
+					display: block;
+					opacity: 0;
+					position: relative;
+					top: 100px;
+					transition-property: top, opacity;
+					transition-duration: $anim-speed;
+					transition-delay: 0s;
+				}
+				.card-name {
+					line-height: 1;
+					font-weight: 600;
+					font-size: 18px;
+				}
+				.card-info {
+					line-height: 1.2;
+					margin-top: 5px;
+					font-size: 12px;
+				}
+			}
+			&:hover {
+				&:before,
+				span {
+					opacity: 1;
+				}
+				&:before {
+					top: 0;
+				}
+				span {
+					top: 0;
+				}
+				.card-name {
+					transition-delay: 0.15s;
+				}
+				.card-info {
+					transition-delay: 0.25s;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,173 @@
+$primary-font:'Inter', sans-serif;
+$copy-font:'Inter', sans-serif;
+$primary-color:#303030; /* cinza escuro */ 
+$text-color:gray; 
+$orange-color:#CC6601;
+$green-color:#2D903D;     /*#2D903D - verde */   /*#303030 - cinza escuro */
+
+@mixin mq($smallerValue,$biggerValue) {
+  @media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+    @content;
+  }
+}
+
+html{
+	height: 100%;
+}
+body {
+  font-family: $primary-font;
+  height:100%;
+}
+
+.banner-formacion{
+    	width:100%;
+      height: 80vh;
+    	position: relative;
+    	background-image: url("../img/dakota-corbin-PmNjS6b3XP4-unsplash.jpg");
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center;
+    	@include mq(0,600px){
+          height: 50%;
+     }
+	.banner-tittle{
+	    position:absolute;
+      top:40%;
+      left:10%;
+	    max-width:60%;
+	    width:100%;
+      @include mq(0,600px){
+          top:10%;
+     }
+		h1{
+    	  font-family: $primary-font;
+        font-weight: 400;
+    	  font-size:40px;
+        color:$primary-color;
+        margin-bottom:30px;
+        @include mq(0,600px){
+          font-size: 45px;
+       }
+	  }	
+	  p{
+      font-size:24px;   
+      color:$primary-color;
+      font-family:$primary-font;
+      font-weight: 400;
+      margin-bottom:60px;
+      @include mq(0,600px){
+        font-size: 18px;
+        margin-bottom: 20px;
+     }
+    }
+  }
+}
+
+/* info base */
+
+.modulo-0{
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  padding: 7%;
+  .text-center{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: $primary-font; 
+    @include mq(0,600px){
+      line-height: 1.3;
+    }
+  }
+  .wrapper-1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width:600px;
+    margin:50px auto;
+    @include mq(0,600px){
+          grid-template-columns:1fr;
+          width: 100%;
+       }
+    .tempo-h{
+      text-align: center;
+      h1{
+        font-size:70px;   
+        color:$primary-color;
+        font-family:$primary-font;
+        margin-bottom: 10px; 
+        color:$green-color;
+        &.t-total{
+          color:$orange-color;
+        }
+      }
+      p{
+        font-size:24px;   
+        color:$green-color;
+        font-family:$primary-font;
+        &.t-total{
+          color:$orange-color;
+        }
+       }
+
+    }
+  }
+}
+
+.aside-2{
+  margin:200px 0 100px 0;
+   @include mq(0,600px){
+        margin:100px 0 100px 0;
+      }
+  h2{
+    text-align: center;
+    font-size: 32px;
+    color:$orange-color;
+    margin-bottom: 100px;
+    @include mq(0,600px){
+        margin-bottom: 30px;
+        font-size: 30px;
+      }
+  }
+  .wrapper-3{
+    max-width:1100px;
+    margin:0 auto;
+    font-size:0;
+    .info-aside-2{
+      font-size:12px;
+      display:inline-block;
+      width:calc(50% - 10px);
+      &:nth-of-type(1){
+        border-right:#CC6601 2px solid;
+        @include mq(0,600px){
+            border-bottom:#CC6601 2px solid;
+            border-right:none;
+            width: 85%;
+            margin:0 auto;
+        }
+      }
+      @include mq(0,600px){
+            max-width: 100%;
+            width: 100%;
+            display: block;
+       }
+       a{
+          text-decoration: none;
+        }
+      h1{
+        display:block;
+        margin:20px 0;
+        font-size:30px;
+        color:$primary-color;
+        text-transform:uppercase;
+        text-align: center;
+        &:hover{
+          color:$green-color;
+          transition: all 0.25s ease 0s;
+        }
+        @include mq(0,600px){
+          padding:4%;
+        }
+      }
+  }
+ }
+}

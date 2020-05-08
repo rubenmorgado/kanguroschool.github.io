@@ -1,0 +1,292 @@
+$primary-font:'Inter', sans-serif;
+$copy-font:'Inter', sans-serif;
+$primary-color:#303030; /* cinza escuro */ 
+$text-color:gray; 
+$orange-color:#CC6601;
+$green-color:#2D903D;     /*#2D903D - verde */   /*#303030 - cinza escuro */
+
+@mixin mq($smallerValue,$biggerValue) {
+  @media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+    @content;
+  }
+}
+
+html{
+	height: 100%;
+}
+body {
+  font-family: $primary-font;
+  height:100%;
+}
+
+.hero{
+    	width:100%;
+      height: 100vh;
+    	position: relative;
+    	background-image: url("../img/undraw_suburbs_8b83.png");
+    	background-repeat: no-repeat;
+    	background-size: 50% ;
+    	background-position: right;
+    	@include mq(0,600px){
+            height: 50%;
+            background-position: bottom;
+     }
+	.slogan{
+	    position:absolute;
+      top:40%;
+      left:10%;
+	    max-width:50%;
+	    width:100%;
+       @include mq(0,600px){
+            top:10%;
+            max-width:80%;
+       }
+		h1{
+    	  font-family: $primary-font;
+        font-weight: 400;
+    	  font-size:72px;
+        color:#2D903D;
+        margin-bottom:60px;
+        @include mq(0,600px){
+          font-size: 50px;
+       }
+	  }	
+	  p{
+      font-size:32px;   
+      color:$primary-color;
+      font-family:$primary-font;
+      font-weight: 300;
+      margin-bottom:60px;
+      padding-right: 49%;
+      line-height: 1.3;
+      @include mq(0,600px){
+        font-size: 35px;
+        line-height: 1.1;
+        padding-right: 0px;
+     }
+    }
+  }
+}
+
+.main {
+  margin:50px 0 150px 0;
+   @include mq(0,600px){
+          margin:50px auto;
+       }
+  .wrapper {
+    max-width:1100px;
+    margin:0 auto;
+    font-size:0;
+    .programa-kang {
+      font-size:12px;
+      display:inline-block;
+      width:calc(50% - 10px);
+      vertical-align: middle;
+      overflow: hidden;
+      &:nth-of-type(1){
+        margin-right:20px;
+      }
+      @include mq(0,600px){
+            max-width: 100%;
+            width: 100%;
+            display: block;
+       }
+      .titulo-esq{
+          font-family: $primary-font;
+          font-weight: 300;
+          font-size: 20px;
+          margin-bottom: 50px;
+          text-align: left;
+          @include mq(0,600px){
+            padding: 20px;
+            margin: 0px;
+        }
+       }
+      }
+      h1{
+        display:block;
+        font-family:$primary-font;
+        font-size: 40px;
+        color:$primary-color; 
+        margin-bottom: 50px;
+        text-align: left;
+        padding-right: 29%;
+        transition: all 0.25s ease 0s;
+        &:hover{
+          color:#2D903D;
+          cursor: pointer;
+          transition: all 0.25s ease 0s;
+        }
+        @include mq(0,600px){
+          padding: 20px;
+          margin: 0px;
+        }
+      }
+      .left{
+        font-size:24px;   
+        color:$text-color;
+        font-family:$primary-font;
+        font-weight: 200;
+        margin-bottom:30px;
+        padding-right:173px;
+        text-align: left;
+        line-height: 1.1;
+        @include mq(0,600px){
+           padding: 20px; 
+        &:nth-of-type(2){
+          margin-bottom: 40px;
+      }
+     }
+    }
+    a{
+        font-family:$primary-font;
+        font-size:14px;
+        color:#CC6601;
+        text-decoration:none;
+        line-height:30px;
+        display:inline-block;
+        padding: 7px 20px;
+        border:solid 1px #CC6601;
+        border-radius: 25px;
+        text-transform:uppercase;
+        transition: all 0.25s ease 0s;
+        &:hover{
+          background-color:#CC6601;
+          color: #fff;
+          transition: all 0.25s ease 0s;
+        }
+        @include mq(0,600px){
+          padding: 17px 20px 17px 20px;
+          line-height: 15px;
+          margin:0 0 40px 20px;
+       }
+     }
+     img {
+        width:100%;
+        transition: all 0.25s ease 0s;
+        &:hover{
+          transform: scale(1.1);
+          transition: all 0.25s ease 0s;
+        }
+   }
+ }
+}
+
+.especial {
+  margin:50px 0 150px 0;
+   @include mq(0,600px){
+            margin:50px auto;
+       }
+  .cursos {
+    max-width:1100px;
+    margin:0 auto;
+    font-size:0;
+    .info-about {
+      font-size:12px;
+      display:inline-block;
+      width:calc(50% - 10px);
+      overflow: hidden;
+      vertical-align: middle;
+      &.hide{
+        display: none;
+        @include mq(0,600px){
+            max-width: 100%;
+            width: 100%;
+            display: block;
+        }
+      }
+      &:nth-of-type(1){
+        margin-right:20px;
+      }
+      @include mq(0,600px){
+            max-width: 100%;
+            width: 100%;
+            display: block;
+       }
+      img {
+        width:100%;
+        transition: all 0.25s ease 0s;
+         &.show{
+          @include mq(0,600px){
+            display: none;
+         }
+        }
+        &:hover{
+          transform: scale(1.1);
+          transition: all 0.25s ease 0s;
+          }
+         }
+      .titulo-drt{
+          font-family: $primary-font;
+          font-weight: 300;
+          font-size: 20px;
+          margin-bottom: 50px;
+          text-align: left;
+          padding-left: 170px;
+          @include mq(0,600px){
+            padding: 20px;
+            margin: 0px;
+          }
+       }
+      h1{
+        display:block;
+        font-family:$primary-font;
+        font-size: 40px;
+        color:$primary-color; 
+        margin-bottom: 50px;
+        text-align: left;
+        padding-left: 170px;
+        transition: all 0.25s ease 0s;
+        &:hover{
+          color:#2D903D;
+          cursor: pointer;
+          transition: all 0.25s ease 0s;
+        }
+        @include mq(0,600px){
+            padding: 20px;
+            margin: 0px;
+        }
+      }
+      .right{
+        font-size:24px;   
+        color:$text-color;
+        font-family:$primary-font;
+        font-weight: 200;
+        margin-bottom:30px;
+        padding-left: 170px;
+        text-align: left;
+        line-height: 1.1;
+        @include mq(0,600px){
+            padding: 20px;
+        &:nth-of-type(2){
+          margin-bottom: 40px;
+      };
+     }
+    }
+    a{
+        font-family:$primary-font;
+        font-size:14px;
+        color:#CC6601;
+        text-decoration:none;
+        line-height:30px;
+        display:inline-block;
+        padding: 7px 20px;
+        border:solid 1px #CC6601;
+        border-radius: 25px;
+        text-transform:uppercase;
+        transition: all 0.25s ease 0s;
+        margin-left: 170px;
+        &:hover{
+          background-color:#CC6601;
+          color: #fff;
+          transition: all 0.25s ease 0s;
+        }
+        @include mq(0,600px){
+          padding: 17px 20px 17px 20px;
+          line-height: 15px;
+          margin:0 0 40px 20px;
+       }
+     }
+  }
+ }
+}

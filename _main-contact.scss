@@ -1,0 +1,60 @@
+$primary-font:'Inter', sans-serif;
+$copy-font:'Inter', sans-serif;
+$primary-color:#303030; /* cinza escuro */ 
+$orange-color:#CC6601;
+$green-color:#2D903D;     /*#2D903D - verde */   /*#303030 - cinza escuro */
+
+@mixin mq($smallerValue,$biggerValue) {
+  @media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+    @content;
+  }
+}
+
+.contact-Info{
+	max-width: 100%;
+	position: relative;
+	padding: 0 10% 2% 10%;
+	.container-1{
+		display: grid;
+		width: 85%;
+		margin: 60px auto;
+    	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    	grid-gap: 8rem;
+    	@include mq(0,600px){
+            margin-top: 0px;
+            margin-bottom: 20px;
+            grid-gap: 3rem;
+     }
+	}
+	.main-contact{
+		h2{
+			font-size: 1.5rem;
+			font-family: $primary-font;
+			margin-bottom: 20px;
+			color:$primary-color;
+		}
+		a{
+			text-decoration: none;
+			color:$primary-color;
+			font-size: 1rem;
+		}
+		p{
+			font-size: 1rem;
+			font-family: $primary-font;
+			margin-bottom: 20px;
+			color:$primary-color;
+			line-height: 1.2;
+		}
+	}
+	.img-school{
+		width: 85%;
+		margin: 0 auto;
+		@include mq(0,600px){
+            margin-bottom:35px;
+            width: 100%;
+     }
+		img{
+			width: 100%;
+		}
+	}
+}

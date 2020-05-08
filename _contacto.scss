@@ -1,0 +1,54 @@
+$primary-font:'Inter', sans-serif;
+$copy-font:'Inter', sans-serif;
+$primary-color:#303030; /* cinza escuro */ 
+$text-color:gray; 
+$orange-color:#CC6601;
+$green-color:#2D903D;     /*#2D903D - verde */   /*#303030 - cinza escuro */
+
+@mixin mq($smallerValue,$biggerValue) {
+  @media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+    @content;
+  }
+}
+
+
+html{
+	height: 100%;
+}
+body {
+  font-family: $primary-font;
+  height:100%;
+}
+
+.banner-contact{
+      width:100%;
+      height: 60vh;
+      position: relative;
+      @include mq(0,600px){
+            height: 40%;
+     }
+  .slogan{
+      position:absolute;
+      top:70%;
+      left:10%;
+      max-width:60%;
+      width:100%;
+      @include mq(0,600px){
+          height: 50%;
+          max-width: 80%;
+          top:10%;
+     }
+    h1{
+        font-family: $primary-font;
+        font-weight: 300;
+        font-size:40px;
+        color:$primary-color;
+        @include mq(0,600px){
+        font-size: 45px;
+       }
+    } 
+    .txt-o{
+      color:$orange-color; 
+    }
+  }
+}
